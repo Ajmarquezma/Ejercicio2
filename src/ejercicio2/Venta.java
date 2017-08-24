@@ -7,7 +7,7 @@ package ejercicio2;
 
 /**
  *
- * @author Estudiante
+ * @author Aldo Marquez y Luis Suarez
  */
 public class Venta {
     private Producto prod;
