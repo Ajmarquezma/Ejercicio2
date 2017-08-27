@@ -12,12 +12,13 @@ package ejercicio2;
 public class Producto {
     private int Codigo;
     private String Descripcion;
-    private int PrecioUnitario;
+    private double PrecioUnitario;
 
-    public Producto() {
-    }
-
-    
+    public Producto(int Codigo, String Descripcion, int PrecioUnitario) {
+        this.Codigo = Codigo;
+        this.Descripcion = Descripcion;
+        this.PrecioUnitario = PrecioUnitario;
+    }    
     public int getCodigo() {
         return Codigo;
     }
@@ -34,7 +35,7 @@ public class Producto {
         this.Descripcion = Descripcion;
     }
 
-    public int getPrecioUnitario() {
+    public double getPrecioUnitario() {
         return PrecioUnitario;
     }
 
@@ -44,7 +45,7 @@ public class Producto {
 
     @Override
     public String toString() {
-        return "Producto{" + "Codigo=" + Codigo + ", Descripcion=" + Descripcion + ", PrecioUnitario=" + PrecioUnitario + '}';
+        return "Producto{" + "Codigo=" + Codigo + '}';
     }
     
     

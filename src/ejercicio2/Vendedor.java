@@ -14,9 +14,13 @@ public class Vendedor {
     private String Nombre;
     private String Apellido;
 
-    public Vendedor() {
+    public Vendedor(int Id, String Nombre, String Apellido) {
+        this.Id = Id;
+        this.Nombre = Nombre;
+        this.Apellido = Apellido;
     }
 
+  
     
     public int getId() {
         return Id;
