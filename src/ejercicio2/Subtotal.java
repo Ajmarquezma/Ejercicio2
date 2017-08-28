@@ -35,8 +35,6 @@ public class Subtotal {
         this.cantidad = cantidad;
     }
 
- 
-
 
     public double getSubtotal(){
         return this.getCantidad() * precio.getPrecioUnitario();

@@ -14,8 +14,13 @@ public class Fecha {
     private int Mes;
     private int Año;
 
-    public Fecha() {
+    public Fecha(int Dia, int Mes, int Año) {
+        this.Dia = Dia;
+        this.Mes = Mes;
+        this.Año = Año;
     }
+
+   
 
     public int getDia() {
         return Dia;
@@ -43,7 +48,7 @@ public class Fecha {
 
     @Override
     public String toString() {
-        return "Fecha{" + "Dia=" + Dia + ", Mes=" + Mes + ", A\u00f1o=" + Año + '}';
+        return "Fecha{" + Dia + "/" + Mes + "/" + Año + '}';
     }
     
     

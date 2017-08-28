@@ -14,9 +14,15 @@ public class Venta {
     private Vendedor vend;
     private int formaPago;
     private int promo;
-    private Producto precio;
-    private int cantidad;
-    private double total =0;
+    
+
+    public Venta(Fecha fecha, Vendedor vend, int formaPago, int promo) {
+        this.fecha = fecha;
+        this.vend = vend;
+        this.formaPago = formaPago;
+        this.promo = promo;
+    }
+    
    
     private ArrayList <Subtotal> subTotal = new ArrayList();
 
@@ -52,22 +58,6 @@ public class Venta {
         this.promo = promo;
     }
 
-    public Producto getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(Producto precio) {
-        this.precio = precio;
-    }
-
-    public int getCantidad() {
-        return cantidad;
-    }
-
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
-    }
-
     public ArrayList<Subtotal> getSubTotal() {
         return subTotal;
     }
@@ -75,31 +65,24 @@ public class Venta {
     public void setSubTotal(ArrayList<Subtotal> subTotal) {
         this.subTotal = subTotal;
     }
+    
+     public void agregarSubTotal(Producto producto,
+            int cantidad) {
+        subTotal.add(new Subtotal(producto, cantidad));
+    }
+
 
      public double getTotal() {
+        double total=0;
         for (Subtotal s : subTotal) {
             total += s.getSubtotal();
         }
         return total;
     }
 
-    public void setTotal(double total) {
-        this.total = total;
-    }
-     
+    
     @Override
     public String toString() {
-        return "Venta{" + "fecha=" + fecha + ", vend=" + vend + ", formaPago=" + formaPago + ", promo=" + promo + ", subTotal=" + subTotal + ", Total=" + total + '}';
+        return "Venta{" + "fecha=" + fecha + ", vend=" + vend + ", formaPago=" + formaPago + ", subtotal=" + subTotal + ", Total=" + getTotal() + '}';
     }
-    
-    public void agregarSubTotal( ) {
-        subTotal.add(new Subtotal(precio, cantidad));
-    }
-    
-   
-
-    
-
-    
-    
 }
