@@ -5,6 +5,8 @@
  */
 package ejercicio2;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Estudiante
@@ -13,11 +15,26 @@ public class Vendedor {
     private int Id;
     private String Nombre;
     private String Apellido;
-
+    private int Contador=0;
+    
+    
     public Vendedor(int Id, String Nombre, String Apellido) {
         this.Id = Id;
         this.Nombre = Nombre;
         this.Apellido = Apellido;
+    }
+ArrayList<Venta> lista = new ArrayList<>();
+  public void agregarVenta (Venta venta) {
+        lista.add(venta);
+        this.Contador++;
+    }
+
+    public int getContador() {
+        return Contador;
+    }
+
+    public void setContador(int Contador) {
+        this.Contador = Contador;
     }
 
   

@@ -22,7 +22,6 @@ public class Venta {
         this.formaPago = formaPago;
         this.promo = promo;
     }
-    
    
     private ArrayList <Subtotal> subTotal = new ArrayList();
 
